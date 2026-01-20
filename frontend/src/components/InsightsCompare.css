@@ -1,0 +1,280 @@
+/* we took a lot of inspiration and also bits of code from  https://uiverse.io/ */
+
+.insights-compare {
+	background: var(--bg-card);
+	border-radius: 12px;
+	padding: 1.5rem;
+	box-shadow: 0 2px 8px var(--shadow);
+	margin-top: 2rem;
+	border: 1px solid var(--border-light);
+}
+
+.insights-compare h2 {
+	color: var(--text-heading);
+	margin-top: 0;
+	margin-bottom: 1.5rem;
+	font-size: 1.5rem;
+	border-bottom: 2px solid var(--border-color);
+	padding-bottom: 0.75rem;
+}
+
+.no-datasets-message {
+	color: var(--text-muted);
+	text-align: center;
+	padding: 2rem;
+	font-style: italic;
+}
+
+.dataset-selector {
+	margin-bottom: 1.5rem;
+}
+
+.selector-row {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 0.75rem;
+}
+
+.selector-row label {
+	font-weight: 500;
+	color: var(--text-secondary);
+	min-width: 120px;
+}
+
+.dataset-dropdown {
+	flex: 1;
+	max-width: 300px;
+	padding: 0.5rem 0.75rem;
+	font-size: 0.9rem;
+	border: 1px solid var(--border-color);
+	border-radius: 6px;
+	background-color: var(--bg-input);
+	color: var(--text-primary);
+	cursor: pointer;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dataset-dropdown:hover {
+	border-color: var(--accent-primary);
+}
+
+.dataset-dropdown:focus {
+	outline: none;
+	border-color: var(--accent-primary);
+	box-shadow: 0 0 0 3px rgba(60, 0, 97, 0.15);
+}
+
+.comparison-controls {
+	margin-top: 1rem;
+	padding-top: 1rem;
+	border-top: 1px dashed var(--border-color);
+}
+
+.comparison-selector {
+	background: var(--bg-tertiary);
+	padding: 0.6rem 1rem;
+	border-radius: 8px;
+	margin-bottom: 0.5rem;
+}
+
+.remove-comparison-btn {
+	background: #DE73FF;
+	color: white;
+	border: none;
+	border-radius: 50%;
+	width: 26px;
+	height: 26px;
+	font-size: 1.1rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.15s ease;
+	flex-shrink: 0;
+}
+
+.remove-comparison-btn:hover {
+	background: #c94de6;
+}
+
+.add-comparison-btn {
+	background: #3C0061;
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5em;
+	font-size: 0.85rem;
+	cursor: pointer;
+	transition: all 250ms;
+	margin-top: 0.5rem;
+	box-shadow: 4px 8px 10px -3px rgba(0, 0, 0, 0.25);
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.add-comparison-btn::before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 0;
+	border-radius: 0.5em;
+	background-color: #5a0091;
+	z-index: -1;
+	transition: all 350ms;
+	left: 0;
+	top: 0;
+}
+
+.add-comparison-btn:hover::before {
+	width: 100%;
+}
+
+.insights-panels {
+	display: grid;
+	gap: 1.5rem;
+}
+
+.insights-panels.panels-1 {
+	grid-template-columns: 1fr;
+}
+
+.insights-panels.panels-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.insights-panels.panels-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1600px) {
+	.insights-panels.panels-3 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 1100px) {
+	.insights-panels.panels-2,
+	.insights-panels.panels-3 {
+		grid-template-columns: 1fr;
+	}
+	
+	.insights-panels.panels-1 {
+		max-width: 100%;
+	}
+}
+
+.insights-panel {
+	background: var(--bg-tertiary);
+	border: 1px solid var(--border-color);
+	border-radius: 10px;
+	padding: 1rem;
+	overflow: hidden;
+	animation: panelFadeIn 0.4s ease forwards;
+	transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	transform-origin: top center;
+	max-height: 2000px;
+}
+
+@keyframes panelFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px) scale(0.95);
+		max-height: 0;
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+		max-height: 2000px;
+	}
+}
+
+.insights-panel-removing {
+	opacity: 0;
+	max-height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	transform: scaleY(0);
+	pointer-events: none;
+}
+
+.panel-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 0.5rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 2px solid var(--accent-primary);
+}
+
+.panel-header h3 {
+	margin: 0;
+	color: var(--text-heading);
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+.comparison-badge {
+	background: var(--text-muted);
+	color: white;
+	font-size: 0.7rem;
+	padding: 0.2rem 0.4rem;
+	border-radius: 4px;
+}
+
+.insights-panel .insights-view {
+	margin-top: 0;
+	padding-top: 0;
+	border-top: none;
+}
+
+.insights-panel .insights-view h3 {
+	display: none;
+}
+
+.insights-panel .insights-filters {
+	margin-bottom: 1rem;
+}
+
+.insights-panel .insights-dept-select {
+	max-width: 100%;
+	min-height: 80px;
+}
+
+.insights-panel .insights-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+}
+
+.insights-panel .insight-card {
+	padding: 1rem;
+}
+
+.insights-panel .insight-card h4 {
+	font-size: 0.9rem;
+	margin-bottom: 0.5rem;
+}
+
+.insights-panels.panels-1 .insights-panel .insights-grid {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1200px) {
+	.insights-panels.panels-1 .insights-panel .insights-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 800px) {
+	.insights-panels.panels-1 .insights-panel .insights-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.insights-panels.panels-2 .insights-panel .insights-grid,
+.insights-panels.panels-3 .insights-panel .insights-grid {
+	grid-template-columns: 1fr;
+}

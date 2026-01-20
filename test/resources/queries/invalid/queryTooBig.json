@@ -1,0 +1,11 @@
+{
+	"title": "Query Too large can't return more than 5000 results",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": ["sections_dept"]
+		}
+	},
+	"errorExpected": true,
+	"expected": "ResultTooLargeError"
+}

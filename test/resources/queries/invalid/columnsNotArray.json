@@ -1,0 +1,9 @@
+{
+	"title": "COLUMNS is not an array",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": { "COLUMNS": "Not an Array" }
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

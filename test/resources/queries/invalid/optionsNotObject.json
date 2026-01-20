@@ -1,0 +1,9 @@
+{
+	"title": "OPTIONS is not an object",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": "Not an object"
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

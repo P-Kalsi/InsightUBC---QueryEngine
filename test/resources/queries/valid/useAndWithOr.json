@@ -1,0 +1,535 @@
+{
+	"title": "Query using And with Or",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"sections_id": "101"
+					}
+				},
+				{
+					"OR": [
+						{
+							"IS": {
+								"sections_dept": "cpsc"
+							}
+						},
+						{
+							"IS": {
+								"sections_dept": "math"
+							}
+						}
+					]
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["sections_dept", "sections_id"],
+			"ORDER": "sections_id"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		},
+		{
+			"sections_dept": "math",
+			"sections_id": "101"
+		}
+	]
+}

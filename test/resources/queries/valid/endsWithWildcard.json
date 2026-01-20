@@ -1,0 +1,216 @@
+{
+	"title": "Query ending with wildcard \"*\"",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"sections_id": "30*"
+					}
+				},
+				{
+					"GT": {
+						"sections_avg": 90
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["sections_dept", "sections_id", "sections_avg"],
+			"ORDER": "sections_id"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept": "spph",
+			"sections_id": "300",
+			"sections_avg": 98.98
+		},
+		{
+			"sections_dept": "spph",
+			"sections_id": "300",
+			"sections_avg": 98.98
+		},
+		{
+			"sections_dept": "russ",
+			"sections_id": "300",
+			"sections_avg": 92.3
+		},
+		{
+			"sections_dept": "russ",
+			"sections_id": "300",
+			"sections_avg": 92.3
+		},
+		{
+			"sections_dept": "pcth",
+			"sections_id": "300",
+			"sections_avg": 90.93
+		},
+		{
+			"sections_dept": "pcth",
+			"sections_id": "300",
+			"sections_avg": 90.93
+		},
+		{
+			"sections_dept": "civl",
+			"sections_id": "301",
+			"sections_avg": 90.11
+		},
+		{
+			"sections_dept": "civl",
+			"sections_id": "301",
+			"sections_avg": 90.11
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 93.25
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 93.25
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 91.53
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 91.53
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 91.64
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 91.64
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 90.44
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 90.44
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 93.51
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 94.24
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 92.75
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 96
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 96
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 91.77
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 91.77
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 92.43
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 91.37
+		},
+		{
+			"sections_dept": "epse",
+			"sections_id": "303",
+			"sections_avg": 93.56
+		},
+		{
+			"sections_dept": "musc",
+			"sections_id": "305",
+			"sections_avg": 92.63
+		},
+		{
+			"sections_dept": "musc",
+			"sections_id": "305",
+			"sections_avg": 92.63
+		},
+		{
+			"sections_dept": "edcp",
+			"sections_id": "305",
+			"sections_avg": 90.24
+		},
+		{
+			"sections_dept": "edcp",
+			"sections_id": "305",
+			"sections_avg": 90.24
+		},
+		{
+			"sections_dept": "cohr",
+			"sections_id": "305",
+			"sections_avg": 90.46
+		},
+		{
+			"sections_dept": "cohr",
+			"sections_id": "305",
+			"sections_avg": 90.46
+		},
+		{
+			"sections_dept": "nurs",
+			"sections_id": "306",
+			"sections_avg": 94.15
+		},
+		{
+			"sections_dept": "nurs",
+			"sections_id": "306",
+			"sections_avg": 94.15
+		},
+		{
+			"sections_dept": "thtr",
+			"sections_id": "308",
+			"sections_avg": 90.73
+		},
+		{
+			"sections_dept": "thtr",
+			"sections_id": "308",
+			"sections_avg": 90.73
+		},
+		{
+			"sections_dept": "thtr",
+			"sections_id": "308",
+			"sections_avg": 93.05
+		},
+		{
+			"sections_dept": "thtr",
+			"sections_id": "308",
+			"sections_avg": 93.05
+		}
+	]
+}

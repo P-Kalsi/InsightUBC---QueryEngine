@@ -1,0 +1,37 @@
+/* we took a lot of inspiration and also bits of code from  https://uiverse.io/ */
+
+.dataset-list {
+	background: var(--bg-card);
+	border-radius: 8px;
+	padding: 2rem;
+	box-shadow: 0 2px 4px var(--shadow);
+	border: 1px solid var(--border-light);
+}
+
+.dataset-list h2 {
+	margin-top: 0;
+	color: var(--text-heading);
+}
+
+.datasets-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+.loading,
+.empty-message {
+	text-align: center;
+	padding: 2rem;
+	color: var(--text-muted);
+	font-size: 1.1rem;
+}
+
+.error-message {
+	background-color: rgba(231, 76, 60, 0.1);
+	color: var(--accent-red);
+	padding: 1rem;
+	border-radius: 4px;
+	border-left: 4px solid var(--accent-red);
+}

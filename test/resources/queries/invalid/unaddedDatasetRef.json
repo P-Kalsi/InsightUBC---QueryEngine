@@ -1,0 +1,15 @@
+{
+	"title": "Using unadded dataset in query",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"new_avg": 90
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["new_dept", "new_avg"]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

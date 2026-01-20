@@ -1,0 +1,9 @@
+{
+	"title": "WHERE is not an object",
+	"input": {
+		"WHERE": "Not an object",
+		"OPTIONS": { "ORDER": "sections_avg" }
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

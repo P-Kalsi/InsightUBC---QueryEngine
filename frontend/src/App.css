@@ -1,0 +1,64 @@
+/* we took a lot of inspiration and also bits of code from  https://uiverse.io/ */
+
+.app {
+	min-height: 100vh;
+	background-color: var(--bg-primary);
+	display: flex;
+	flex-direction: column;
+}
+
+.app-header {
+	background-color: var(--header-bg);
+	color: var(--header-text);
+	padding: 1rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 2px 4px var(--shadow);
+}
+
+.app-header h1 {
+	margin: 0;
+	font-size: 1.75rem;
+}
+
+.header-controls {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.app-main {
+	max-width: 1800px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 2rem 3rem 3rem 3rem;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.app-top-section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+}
+
+@media (max-width: 1000px) {
+	.app-top-section {
+		grid-template-columns: 1fr;
+	}
+
+	.app-header {
+		padding: 1rem;
+	}
+
+	.app-header h1 {
+		font-size: 1.4rem;
+	}
+
+	.app-main {
+		padding: 1.5rem;
+	}
+}

@@ -1,0 +1,46 @@
+{
+	"title": "Query using Year",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"EQ": {
+						"sections_year": 2016
+					}
+				},
+				{
+					"IS": {
+						"sections_dept": "cpsc"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["sections_dept", "sections_id", "sections_year"],
+			"ORDER": "sections_id"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept": "cpsc",
+			"sections_id": "310",
+			"sections_year": 2016
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_id": "312",
+			"sections_year": 2016
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_id": "340",
+			"sections_year": 2016
+		},
+		{
+			"sections_dept": "cpsc",
+			"sections_id": "415",
+			"sections_year": 2016
+		}
+	]
+}

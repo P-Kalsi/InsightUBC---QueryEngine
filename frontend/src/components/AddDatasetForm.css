@@ -1,0 +1,86 @@
+/* we took a lot of inspiration and also bits of code from  https://uiverse.io/ */
+
+.add-dataset-form {
+	background: var(--bg-card);
+	border-radius: 8px;
+	padding: 2rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 2px 4px var(--shadow);
+	border: 1px solid var(--border-light);
+}
+
+.add-dataset-form h2 {
+	margin-top: 0;
+	color: var(--text-heading);
+}
+
+.form-group {
+	margin-bottom: 1.5rem;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+	color: var(--text-secondary);
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"] {
+	width: 100%;
+	padding: 0.75rem;
+	border: 1px solid var(--border-color);
+	border-radius: 4px;
+	font-size: 1rem;
+	box-sizing: border-box;
+	background-color: var(--bg-input);
+	color: var(--text-primary);
+}
+
+.form-group input[type="text"]:focus {
+	outline: none;
+	border-color: var(--accent-primary);
+}
+
+.form-group input[type="text"]::placeholder {
+	color: var(--text-muted);
+}
+
+.add-dataset-form button[type="submit"] {
+	background-color: var(--accent-primary);
+	color: white;
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 0.5em;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	box-shadow: 4px 8px 10px -3px rgba(0, 0, 0, 0.2);
+}
+
+.add-dataset-form button[type="submit"]:hover:not(:disabled) {
+	background-color: var(--accent-primary-hover);
+}
+
+.add-dataset-form button[type="submit"]:disabled {
+	background-color: var(--text-muted);
+	cursor: not-allowed;
+}
+
+.error-message {
+	background-color: rgba(231, 76, 60, 0.1);
+	color: var(--accent-red);
+	padding: 1rem;
+	border-radius: 4px;
+	margin-top: 1rem;
+	border-left: 4px solid var(--accent-red);
+}
+
+.success-message {
+	background-color: rgba(40, 167, 69, 0.1);
+	color: var(--accent-green);
+	padding: 1rem;
+	border-radius: 4px;
+	margin-top: 1rem;
+	border-left: 4px solid var(--accent-green);
+}

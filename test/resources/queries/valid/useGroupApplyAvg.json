@@ -1,0 +1,197 @@
+{
+	"title": "useGroupApplyAvg",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"rooms_seats": 50
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"avgSeats"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"avgSeats"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"avgSeats": {
+						"AVG": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_shortname": "UCLL",
+			"avgSeats": 55
+		},
+		{
+			"rooms_shortname": "FORW",
+			"avgSeats": 63
+		},
+		{
+			"rooms_shortname": "SPPH",
+			"avgSeats": 66
+		},
+		{
+			"rooms_shortname": "SOWK",
+			"avgSeats": 68
+		},
+		{
+			"rooms_shortname": "BRKX",
+			"avgSeats": 70
+		},
+		{
+			"rooms_shortname": "LASR",
+			"avgSeats": 71.25
+		},
+		{
+			"rooms_shortname": "ORCH",
+			"avgSeats": 72
+		},
+		{
+			"rooms_shortname": "ANGU",
+			"avgSeats": 75.4
+		},
+		{
+			"rooms_shortname": "FNH",
+			"avgSeats": 76.5
+		},
+		{
+			"rooms_shortname": "CEME",
+			"avgSeats": 81
+		},
+		{
+			"rooms_shortname": "ANSO",
+			"avgSeats": 90
+		},
+		{
+			"rooms_shortname": "MCLD",
+			"avgSeats": 92.6
+		},
+		{
+			"rooms_shortname": "ALRD",
+			"avgSeats": 94
+		},
+		{
+			"rooms_shortname": "IONA",
+			"avgSeats": 100
+		},
+		{
+			"rooms_shortname": "GEOG",
+			"avgSeats": 103.4
+		},
+		{
+			"rooms_shortname": "MATX",
+			"avgSeats": 106
+		},
+		{
+			"rooms_shortname": "BUCH",
+			"avgSeats": 108.19
+		},
+		{
+			"rooms_shortname": "MCML",
+			"avgSeats": 115.33
+		},
+		{
+			"rooms_shortname": "CHBE",
+			"avgSeats": 118
+		},
+		{
+			"rooms_shortname": "FSC",
+			"avgSeats": 119.75
+		},
+		{
+			"rooms_shortname": "DMP",
+			"avgSeats": 120
+		},
+		{
+			"rooms_shortname": "IBLC",
+			"avgSeats": 133
+		},
+		{
+			"rooms_shortname": "HEBB",
+			"avgSeats": 134.25
+		},
+		{
+			"rooms_shortname": "MATH",
+			"avgSeats": 142
+		},
+		{
+			"rooms_shortname": "AERL",
+			"avgSeats": 144
+		},
+		{
+			"rooms_shortname": "BIOL",
+			"avgSeats": 152
+		},
+		{
+			"rooms_shortname": "CHEM",
+			"avgSeats": 152.17
+		},
+		{
+			"rooms_shortname": "LSK",
+			"avgSeats": 154.33
+		},
+		{
+			"rooms_shortname": "PHRM",
+			"avgSeats": 158.33
+		},
+		{
+			"rooms_shortname": "FRDM",
+			"avgSeats": 160
+		},
+		{
+			"rooms_shortname": "SCRF",
+			"avgSeats": 170
+		},
+		{
+			"rooms_shortname": "HENN",
+			"avgSeats": 187.33
+		},
+		{
+			"rooms_shortname": "WOOD",
+			"avgSeats": 188.67
+		},
+		{
+			"rooms_shortname": "SWNG",
+			"avgSeats": 188.75
+		},
+		{
+			"rooms_shortname": "ESB",
+			"avgSeats": 193.33
+		},
+		{
+			"rooms_shortname": "WESB",
+			"avgSeats": 213.5
+		},
+		{
+			"rooms_shortname": "LSC",
+			"avgSeats": 275
+		},
+		{
+			"rooms_shortname": "SRC",
+			"avgSeats": 299
+		},
+		{
+			"rooms_shortname": "CIRS",
+			"avgSeats": 426
+		},
+		{
+			"rooms_shortname": "OSBO",
+			"avgSeats": 442
+		}
+	]
+}

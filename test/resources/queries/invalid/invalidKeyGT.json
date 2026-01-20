@@ -1,0 +1,15 @@
+{
+	"title": "Using GT with a string instead of number",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_avg": "90"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["sections_avg"]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

@@ -1,0 +1,15 @@
+{
+	"title": "Using IS with a number instead of string",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_avg": 100
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["sections_avg"]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}
